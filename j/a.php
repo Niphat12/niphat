@@ -29,6 +29,8 @@ if(isset($_POST['Submit'])) { // เพิ่มปีกกาเปิด
         <tr>
             <th>รหัสภาค</th>
             <th>ชื่อภาค</th> 
+            <th>ลบ</th> 
+
         </tr>
 <?php
     include_once("connectDb.php"); // ตรวจสอบชื่อไฟล์ให้ตรงกัน (connectDb.php vs connectDB.php)
@@ -40,9 +42,12 @@ if(isset($_POST['Submit'])) { // เพิ่มปีกกาเปิด
         <tr>
             <td><?php echo $data['r_id'];?></td>
             <td><?php echo $data['r_name'];?></td>
+            <td><img src="del.png" width="20"><a href="delete_region.php"><?php echo $data['r_id'];?></td>
+
         </tr>
 <?php } ?> 
     </table>
+    
 
 </body>
 </html>
